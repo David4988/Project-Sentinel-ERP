@@ -8,6 +8,7 @@ import AdminDashboard from './AdminDashboard';
 import StaffManagement from './StaffManagement';
 import StudentManagement from './StudentManagement';
 import SystemSettings from './SystemSettings';
+import AdminClassAnalytics from './AdminClassAnalytics';
 
 const AdminLayout: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('dashboard');
@@ -17,7 +18,7 @@ const AdminLayout: React.FC = () => {
       case "dashboard":
         return <AdminDashboard onPageChange={setCurrentPage} />;
       case "analytics":
-        return <ClassAnalytics />;
+        return <AdminClassAnalytics />;
       case "students":
         return <StudentManagement />;
       case "staff":

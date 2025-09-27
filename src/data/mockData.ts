@@ -59,45 +59,45 @@ export const studentData = {
 };
 
 const englishNamesK = [
-  "Oliver Smith",
+  "Aarav Sharma",
   "Charlotte Johnson",
-  "Henry Williams",
+  "Sanya Roy",
   "Amelia Brown",
   "Jack Jones",
   "Emily Miller",
-  "Leo Davis",
+  "Kabir Khanna",
   "Sophie Wilson",
-  "Oscar Moore",
+  "Ravi Sharma",
   "Grace Taylor",
-  "George Anderson",
+  "Ankit Agarwal",
   "Ella Thomas",
-  "Harry Jackson",
+  "Ganesh Rajan",
   "Mia White",
   "Freddie Harris",
   "Isabella Martin",
-  "Archie Thompson",
+  "Alok Verma",
   "Evie Garcia",
   "Alfie Martinez",
   "Poppy Robinson",
-  "Theo Clark",
+  "Priya Patel",
   "Lily Rodriguez",
-  "Arthur Lewis",
+  "Karthik Subramaniam",
   "Ruby Lee",
-  "Jacob Walker",
+  "Aravind Murugan",
   "Ivy Hall",
-  "Thomas Allen",
+  "Santhosh Mani",
   "Willow Young",
-  "James King",
+  "Nikhil Sharma",
   "Daisy Wright",
-  "Joshua Scott",
+  "Rahul Verma",
   "Rosie Green",
-  "Edward Adams",
+  "Aditi Mishra",
   "Hannah Baker",
-  "Sebastian Nelson",
+  "Ashwin Kumar",
   "Jessica Carter",
   "Benjamin Mitchell",
-  "Lucy Perez",
-  "Samuel Roberts",
+  "Sneha Singh",
+  "Varsha Menon",
   "Florence Turner",
 ];
 
@@ -129,44 +129,44 @@ export const AdminCSEKStudents = Array.from({ length: 40 }, (_, i) => {
 });
 
 const englishNamesD = [
-  "William Evans",
+  "Arjun Reddy",
   "Sienna Murphy",
-  "Alexander Bailey",
+  "Deepika Sharma",
   "Scarlett Cooper",
-  "Daniel Richardson",
+  "Rohit Kumar",
   "Chloe Cox",
-  "Matthew Ward",
+  "Aisha Singh",
   "Layla Morgan",
-  "Joseph Kelly",
+  "Vikram Patel",
   "Zoe Bailey",
-  "David Reed",
+  "Pooja Mehta",
   "Molly Wood",
-  "Samuel Bennett",
+  "Rohan Das",
   "Lola Gray",
-  "Adam Watson",
+  "Ananya Bose",
   "Harper James",
-  "Luke Brooks",
+  "Suresh Menon",
   "Ellie Foster",
-  "Ryan Price",
+  "Kavya Rao",
   "Maisie Bell",
-  "Nathan Russell",
+  "Varun Nair",
   "Summer Barnes",
-  "Ethan Powell",
+  "Meera Krishna",
   "Millie Palmer",
-  "Mason Holmes",
+  "Siddharth Jain",
   "Erin Hunt",
-  "Logan Stevens",
+  "Rahul Gupta",
   "Amber Webb",
-  "Jacob Simpson",
-  "Esme Fox",
+  "Neha Sharma",
+  "Riya Gupta",
   "Aiden West",
   "Imogen Rose",
-  "Jake Stone",
+  "Aditya Narayan",
   "Bella Knight",
-  "Max Graham",
+  "Prakash Singh",
   "Alice Hunt",
   "Oscar Ford",
-  "Maya Cook",
+  "Priya Devi",
 ];
 
 export const AdminCSEDStudents = Array.from({ length: 38 }, (_, i) => {
@@ -250,7 +250,7 @@ const cseDStudents = Array.from({ length: 38 }, (_, i) => {
   };
 });
 
-export const classData = {
+export const adminClassData = {
   "CSE-K": {
     avgBri: 68,
     highRiskCount: cseKStudents.filter((s) => s.riskLevel === "high").length,
@@ -322,6 +322,80 @@ export const classData = {
     ],
 
     students: AdminCSEDStudents,
+  },
+};
+export const classData = {
+  "CSE-K": {
+    avgBri: 68,
+    highRiskCount: cseKStudents.filter((s) => s.riskLevel === "high").length,
+    avgAttendance: 82,
+    totalStudents: 40,
+    complaintsCount: 3,
+
+    briTrend: [
+      { week: "Week 1", score: 72 },
+      { week: "Week 2", score: 70 },
+      { week: "Week 3", score: 68 },
+      { week: "Week 4", score: 65 },
+      { week: "Week 5", score: 68 },
+    ],
+
+    riskDistribution: [
+      {
+        risk: "Low",
+        count: cseKStudents.filter((s) => s.riskLevel === "low").length,
+        fill: "#22c55e",
+      },
+      {
+        risk: "Medium",
+        count: cseKStudents.filter((s) => s.riskLevel === "medium").length,
+        fill: "#f59e0b",
+      },
+      {
+        risk: "High",
+        count: cseKStudents.filter((s) => s.riskLevel === "high").length,
+        fill: "#ef4444",
+      },
+    ],
+
+    students: cseKStudents,
+  },
+
+  "CSE-D": {
+    avgBri: 75,
+    highRiskCount: cseDStudents.filter((s) => s.riskLevel === "high")
+      .length,
+    avgAttendance: 88,
+    totalStudents: 38,
+    complaintsCount: 1,
+
+    briTrend: [
+      { week: "Week 1", score: 78 },
+      { week: "Week 2", score: 76 },
+      { week: "Week 3", score: 75 },
+      { week: "Week 4", score: 73 },
+      { week: "Week 5", score: 75 },
+    ],
+
+    riskDistribution: [
+      {
+        risk: "Low",
+        count: cseDStudents.filter((s) => s.riskLevel === "low").length,
+        fill: "#22c55e",
+      },
+      {
+        risk: "Medium",
+        count: cseDStudents.filter((s) => s.riskLevel === "medium").length,
+        fill: "#f59e0b",
+      },
+      {
+        risk: "High",
+        count: cseDStudents.filter((s) => s.riskLevel === "high").length,
+        fill: "#ef4444",
+      },
+    ],
+
+    students: cseDStudents,
   },
 };
 

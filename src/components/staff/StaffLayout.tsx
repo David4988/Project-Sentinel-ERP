@@ -5,6 +5,7 @@ import StaffDashboard from './StaffDashboard';
 import ClassAnalytics from './ClassAnalytics';
 import StaffStudentMonitor from './StaffStudentMonitor';
 import StaffReports from './StaffReports';
+import UploadTestsAssignments from './UploadTestsAssignments';
 
 const StaffLayout: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('dashboard');
@@ -21,6 +22,8 @@ const StaffLayout: React.FC = () => {
         return <StaffStudentMonitor />;
       case 'reports':
         return <StaffReports />;
+      case 'upload':
+        return <UploadTestsAssignments />;
       default:
         return <StaffDashboard onPageChange={setCurrentPage} />;
     }

@@ -23,7 +23,7 @@ const StudentTests: React.FC = () => {
       id: '1',
       subject: 'Mathematics',
       type: 'Unit Test',
-      date: '2024-09-15',
+      date: '2025-10-7',
       time: '10:00 AM',
       duration: '2 hours',
       topics: ['Derivatives', 'Integration', 'Limits']
@@ -32,7 +32,7 @@ const StudentTests: React.FC = () => {
       id: '2',
       subject: 'Physics',
       type: 'Lab Test',
-      date: '2024-09-18',
+      date: '2025-10-8',
       time: '2:00 PM',
       duration: '1.5 hours',
       topics: ['Optics', 'Wave Motion']
@@ -41,7 +41,7 @@ const StudentTests: React.FC = () => {
       id: '3',
       subject: 'Chemistry',
       type: 'Monthly Test',
-      date: '2024-09-22',
+      date: '2025-10-09',
       time: '9:00 AM',
       duration: '2 hours',
       topics: ['Organic Chemistry', 'Reaction Mechanisms']

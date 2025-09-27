@@ -1,61 +1,65 @@
-import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuTrigger 
-} from '@/components/ui/dropdown-menu';
-import { LogOut, User, Settings } from 'lucide-react';
+import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { LogOut, User, Settings } from "lucide-react";
 
 interface NavigationProps {
-  userType: 'student' | 'staff' | 'admin' | 'counsellor';
+  userType: "student" | "staff" | "admin" | "counsellor";
   userName: string;
   currentPage: string;
   onPageChange: (page: string) => void;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ userType, userName, currentPage, onPageChange }) => {
+const Navigation: React.FC<NavigationProps> = ({
+  userType,
+  userName,
+  currentPage,
+  onPageChange,
+}) => {
   const navigate = useNavigate();
   const location = useLocation();
 
   const getMenuItems = () => {
     switch (userType) {
-      case 'student':
+      case "student":
         return [
-          { id: 'dashboard', label: 'Dashboard' },
-          { id: 'attendance', label: 'Attendance' },
-          { id: 'assignments', label: 'Assignments' },
-          { id: 'tests', label: 'Tests' },
-          { id: 'chat', label: 'Group Chat' },
-          { id: 'feedback', label: 'Feedback' },
-          { id: 'profile', label: 'Profile' }
+          { id: "dashboard", label: "Dashboard" },
+          { id: "attendance", label: "Attendance" },
+          { id: "assignments", label: "Assignments" },
+          { id: "tests", label: "Tests" },
+          { id: "chat", label: "Group Chat" },
+          { id: "feedback", label: "Feedback" },
+          { id: "profile", label: "Profile" },
         ];
-      case 'staff':
+      case "staff":
         return [
-          { id: 'dashboard', label: 'Dashboard' },
-          { id: 'cse-k', label: 'CSE-K Analytics' },
-          { id: 'cse-d', label: 'CSE-D Analytics' },
-          { id: 'students', label: 'Student Monitor' },
-          { id: 'reports', label: 'Reports' }
+          { id: "dashboard", label: "Dashboard" },
+          { id: "cse-k", label: "CSE-K Analytics" },
+          { id: "cse-d", label: "CSE-D Analytics" },
+          { id: "students", label: "Student Monitor" },
+          { id: "reports", label: "Reports" },
+          { id: "upload", label: "Upload Tests & Assignments" },
         ];
-      case 'admin':
+      case "admin":
         return [
-          { id: 'dashboard', label: 'Dashboard' },
-          { id: 'analytics', label: 'Analytics' },
-          { id: 'students', label: 'Student Management' },
-          { id: 'staff', label: 'Staff Management' },
-          { id: 'settings', label: 'System Settings' },
-          
+          { id: "dashboard", label: "Dashboard" },
+          { id: "analytics", label: "Analytics" },
+          { id: "students", label: "Student Management" },
+          { id: "staff", label: "Staff Management" },
         ];
-      case 'counsellor':
+      case "counsellor":
         return [
-          { id: 'dashboard', label: 'Dashboard' },
-          { id: 'referrals', label: 'Student Referrals' },
-          { id: 'sessions', label: 'Counselling Sessions' },
-          { id: 'reports', label: 'Wellness Reports' }
+          { id: "dashboard", label: "Dashboard" },
+          { id: "referrals", label: "Student Referrals" },
+          { id: "sessions", label: "Counselling Sessions" },
+          { id: "reports", label: "Wellness Reports" },
         ];
       default:
         return [];
@@ -63,7 +67,7 @@ const Navigation: React.FC<NavigationProps> = ({ userType, userName, currentPage
   };
 
   const handleLogout = () => {
-    navigate('/');
+    navigate("/");
   };
 
   const menuItems = getMenuItems();
@@ -75,8 +79,10 @@ const Navigation: React.FC<NavigationProps> = ({ userType, userName, currentPage
           {/* Logo and Navigation Links */}
           <div className="flex items-center space-x-8">
             <div className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-blue-600">Sentinel</span>
-              <span className="ml-1 text-sm text-gray-500 capitalize">{userType}</span>
+              <span className="text-2xl font-bold text-blue-600">Sentinel ERP</span>
+              <span className="ml-1 text-sm text-gray-500 capitalize">
+                {userType}
+              </span>
             </div>
 
             {/* Navigation Menu */}
@@ -85,7 +91,9 @@ const Navigation: React.FC<NavigationProps> = ({ userType, userName, currentPage
                 <button
                   key={item.id}
                   onClick={() => onPageChange(item.id)}
-                  className={`nav-link ${currentPage === item.id ? 'active' : ''}`}
+                  className={`nav-link ${
+                    currentPage === item.id ? "active" : ""
+                  }`}
                 >
                   {item.label}
                 </button>
@@ -98,10 +106,13 @@ const Navigation: React.FC<NavigationProps> = ({ userType, userName, currentPage
             <span className="hidden sm:block text-sm text-gray-700">
               Welcome, <span className="font-medium">{userName}</span>
             </span>
-            
+
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+                <Button
+                  variant="ghost"
+                  className="relative h-8 w-8 rounded-full"
+                >
                   <Avatar className="h-8 w-8">
                     <AvatarFallback className="bg-blue-600 text-white">
                       {userName.charAt(0).toUpperCase()}
@@ -118,7 +129,10 @@ const Navigation: React.FC<NavigationProps> = ({ userType, userName, currentPage
                   <Settings className="mr-2 h-4 w-4" />
                   Settings
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={handleLogout} className="flex items-center text-red-600">
+                <DropdownMenuItem
+                  onClick={handleLogout}
+                  className="flex items-center text-red-600"
+                >
                   <LogOut className="mr-2 h-4 w-4" />
                   Logout
                 </DropdownMenuItem>
