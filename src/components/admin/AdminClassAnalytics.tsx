@@ -75,7 +75,7 @@ const AdminClassAnalytics: React.FC = () => {
             <CardContent>
               <div className="flex flex-col items-center">
                 <p className="text-gray-600 mb-2">
-                  Average BRI:{" "}
+                  Average Engagement:{" "}
                   <span className="font-semibold">
                     {classData[cls.name].avgBri}
                   </span>

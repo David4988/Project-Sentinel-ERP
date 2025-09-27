@@ -140,7 +140,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ onPageChange }) => {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Avg BRI</p>
+                <p className="text-sm font-medium text-gray-600">Avg Engagement </p>
                 <p
                   className={`text-3xl font-bold ${getBriColor(
                     overallStats.avgBri
@@ -148,7 +148,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ onPageChange }) => {
                 >
                   {overallStats.avgBri}
                 </p>
-                <p className="text-xs text-gray-500 mt-1">Burnout risk</p>
+                <p className="text-xs text-gray-500 mt-1">Engagement Score</p>
               </div>
               <TrendingDown className="w-8 h-8 text-yellow-600" />
             </div>

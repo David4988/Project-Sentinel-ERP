@@ -81,11 +81,11 @@ const StudentDashboard: React.FC = () => {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">BRI Score</p>
+                <p className="text-sm font-medium text-gray-600">Engagement Score</p>
                 <p className={`text-3xl font-bold ${getBriColor(briScore)}`}>
                   {briScore}
                 </p>
-                <p className="text-xs text-gray-500 mt-1">Burnout Risk Index</p>
+                {/* <p className="text-xs text-gray-500 mt-1">Burnout Risk Index</p> */}
               </div>
               <div
                 className={`w-16 h-16 rounded-full bg-gradient-to-br ${getBriGradient(
@@ -170,7 +170,7 @@ const StudentDashboard: React.FC = () => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <TrendingDown className="w-5 h-5" />
-              Burnout Risk Index Trend
+              Engagement Score Trend
             </CardTitle>
           </CardHeader>
           <CardContent>

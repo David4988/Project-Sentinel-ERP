@@ -55,7 +55,7 @@ const Login: React.FC = () => {
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-600 to-indigo-700 items-center justify-center p-12">
         <div className="text-center text-white">
           <GraduationCap className="w-32 h-32 mx-auto mb-8 opacity-90" />
-          <h1 className="text-4xl font-bold mb-4">Smart Campus ERP</h1>
+          <h1 className="text-4xl font-bold mb-4">Sentinel ERP</h1>
           <p className="text-xl text-blue-100 max-w-md">
             Empowering education through intelligent analytics and student well-being monitoring
           </p>

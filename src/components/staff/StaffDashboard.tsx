@@ -195,7 +195,7 @@ const StaffDashboard: React.FC<StaffDashboardProps> = ({ onPageChange }) => {
                 >
                   {cseKData.avgBri}
                 </p>
-                <p className="text-xs text-gray-500">Avg BRI</p>
+                <p className="text-xs text-gray-500">Avg Engagement</p>
               </div>
               <div className="text-center">
                 <p
@@ -254,7 +254,7 @@ const StaffDashboard: React.FC<StaffDashboardProps> = ({ onPageChange }) => {
                 >
                   {cseDData.avgBri}
                 </p>
-                <p className="text-xs text-gray-500">Avg BRI</p>
+                <p className="text-xs text-gray-500">Avg Engagement</p>
               </div>
               <div className="text-center">
                 <p
@@ -320,7 +320,7 @@ const StaffDashboard: React.FC<StaffDashboardProps> = ({ onPageChange }) => {
         {/* Weekly BRI Trend */}
         <Card className="chart-container">
           <CardHeader>
-            <CardTitle>Weekly BRI Trend</CardTitle>
+            <CardTitle>Weekly Engagement Trend</CardTitle>
           </CardHeader>
           <CardContent>
             <ResponsiveContainer width="100%" height={300}>

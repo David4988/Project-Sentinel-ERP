@@ -58,7 +58,7 @@ const ClassAnalytics: React.FC<ClassAnalyticsProps> = ({ className }) => {
           <Card className="p-4">
             <div className="text-center">
               <p className={`text-3xl font-bold ${getBriColor(student.briScore)}`}>{student.briScore}</p>
-              <p className="text-sm text-gray-600">Current BRI</p>
+              <p className="text-sm text-gray-600">Current Engagement Score</p>
             </div>
           </Card>
           <Card className="p-4">
@@ -78,7 +78,7 @@ const ClassAnalytics: React.FC<ClassAnalyticsProps> = ({ className }) => {
         {/* BRI Trend */}
         <Card>
           <CardHeader>
-            <CardTitle>BRI Trend</CardTitle>
+            <CardTitle>Engagement Trend</CardTitle>
           </CardHeader>
           <CardContent>
             <ResponsiveContainer width="100%" height={200}>

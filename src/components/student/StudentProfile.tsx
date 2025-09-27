@@ -145,68 +145,7 @@ const StudentProfile: React.FC = () => {
   return (
     <div className="space-y-8 animate-fade-in">
       {/* Privacy & Consent Section */}
-      <Card className="dashboard-card">
-        <CardHeader>
-          <div className="flex items-center space-x-3">
-            <Shield className="w-6 h-6 text-blue-600" />
-            <CardTitle>Privacy & Consent</CardTitle>
-          </div>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="text-gray-700 text-sm">
-            Control whether your wellness and engagement data is used for
-            analysis and support. You can change this setting anytime.
-          </p>
-          <div className="flex items-center justify-between bg-gray-50 rounded-lg p-4">
-            <div>
-              <h3 className="font-semibold text-gray-800 mb-1 text-sm">
-                Data Sharing Status
-              </h3>
-              <p className="text-xs text-gray-600">
-                {sharingConsent
-                  ? "Your data is used for analysis and support. You can revoke this consent at any time."
-                  : "Your data is private and not used for analysis."}
-              </p>
-            </div>
-            <div
-              className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full ${
-                sharingConsent
-                  ? "bg-green-100 text-green-800 border border-green-200"
-                  : "bg-gray-100 text-gray-800 border border-gray-200"
-              }`}
-            >
-              {sharingConsent ? (
-                <Check className="w-4 h-4" />
-              ) : (
-                <X className="w-4 h-4" />
-              )}
-              <span className="font-medium text-sm">
-                {sharingConsent ? "Allowed" : "Denied"}
-              </span>
-            </div>
-            <Button
-              onClick={handleToggleConsent}
-              className={`ml-4 px-6 py-2 text-xs ${
-                sharingConsent
-                  ? "bg-red-600 hover:bg-red-700"
-                  : "bg-green-600 hover:bg-green-700"
-              }`}
-            >
-              {sharingConsent ? (
-                <>
-                  <EyeOff className="w-4 h-4 mr-2" />
-                  Revoke Consent
-                </>
-              ) : (
-                <>
-                  <Eye className="w-4 h-4 mr-2" />
-                  Grant Consent
-                </>
-              )}
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+      
       {/* Header */}
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-2">
@@ -227,9 +166,9 @@ const StudentProfile: React.FC = () => {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-gray-800">
-                  Current BRI Score
+                  Current Engagement Score
                 </h2>
-                <p className="text-blue-600">Your burnout risk assessment</p>
+                <p className="text-blue-600">Your Score assessment</p>
               </div>
             </div>
             <div className="text-right">
@@ -334,7 +273,68 @@ const StudentProfile: React.FC = () => {
           </div>
         </CardContent>
       </Card>
-
+            <Card className="dashboard-card">
+        <CardHeader>
+          <div className="flex items-center space-x-3">
+            <Shield className="w-6 h-6 text-blue-600" />
+            <CardTitle>Privacy & Consent</CardTitle>
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p className="text-gray-700 text-sm">
+            Control whether your wellness and engagement data is used for
+            analysis and support. You can change this setting anytime.
+          </p>
+          <div className="flex items-center justify-between bg-gray-50 rounded-lg p-4">
+            <div>
+              <h3 className="font-semibold text-gray-800 mb-1 text-sm">
+                Data Sharing Status
+              </h3>
+              <p className="text-xs text-gray-600">
+                {sharingConsent
+                  ? "Your data is used for analysis and support. You can revoke this consent at any time."
+                  : "Your data is private and not used for analysis."}
+              </p>
+            </div>
+            <div
+              className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full ${
+                sharingConsent
+                  ? "bg-green-100 text-green-800 border border-green-200"
+                  : "bg-gray-100 text-gray-800 border border-gray-200"
+              }`}
+            >
+              {sharingConsent ? (
+                <Check className="w-4 h-4" />
+              ) : (
+                <X className="w-4 h-4" />
+              )}
+              <span className="font-medium text-sm">
+                {sharingConsent ? "Allowed" : "Denied"}
+              </span>
+            </div>
+            <Button
+              onClick={handleToggleConsent}
+              className={`ml-4 px-6 py-2 text-xs ${
+                sharingConsent
+                  ? "bg-red-600 hover:bg-red-700"
+                  : "bg-green-600 hover:bg-green-700"
+              }`}
+            >
+              {sharingConsent ? (
+                <>
+                  <EyeOff className="w-4 h-4 mr-2" />
+                  Revoke Consent
+                </>
+              ) : (
+                <>
+                  <Eye className="w-4 h-4 mr-2" />
+                  Grant Consent
+                </>
+              )}
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
       {/* Contributing Factors */}
       <Card className="dashboard-card">
         <CardHeader>
